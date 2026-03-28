@@ -6,7 +6,6 @@
 
 need to have python3
 
-
 ### Download submodule with protobuf
 
 ```bash
@@ -27,7 +26,12 @@ $ source ./set_env.sh
 ```
 
 ### Compiling protobuf for python
+
 ```bash
-$ protoc --python_out=. ./protobufs_ews/meshtastic/ews.proto 
+$ protoc --python_out=. --pyi_out=. ./protobufs_ews/meshtastic/ews.proto
+$ mv ./protobufs_ews/meshtastic/ews_cli.py .
+$ mv ./protobufs_ews/meshtastic/ews_cli.pyi .
 ```
+
+
 
