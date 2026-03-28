@@ -25,13 +25,20 @@ $ install.sh
 $ source ./set_env.sh
 ```
 
-### Compiling protobuf for python
+### Compiling protobuf ews for python
 
 ```bash
 $ protoc --python_out=. --pyi_out=. ./protobufs_ews/meshtastic/ews.proto
-$ mv ./protobufs_ews/meshtastic/ews_cli.py .
-$ mv ./protobufs_ews/meshtastic/ews_cli.pyi .
+$ mv ./protobufs_ews/meshtastic/ews_pb2.py .
+$ mv ./protobufs_ews/meshtastic/ews_pb2.pyi .
 ```
 
 
 
+### Compiling protobuf portnum for python
+
+```bash
+$ protoc --python_out=. --pyi_out=. ./protobufs_ews/meshtastic/portnums.proto
+$ mv ./protobufs_ews/meshtastic/portnums_pb2.py .
+$ mv ./protobufs_ews/meshtastic/portnums_pb2.pyi .
+```

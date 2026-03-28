@@ -2,3 +2,5 @@
 venv
 ews_pb2.py
 ews_pb2.pyi
+portnums_pb2.py
+portnums_pb2.pyi
