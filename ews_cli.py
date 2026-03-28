@@ -1,9 +1,8 @@
-import meshtastic
-import meshtastic.serial_interface
-import time
+import ews_pb2
 
 import questionary
 
+ews_msg : ews_pb2.Ews = ews_pb2.Ews();
 
 
 ## message type
@@ -41,6 +40,29 @@ import questionary
 ## additional parametre not yet supported
 
 ## ask for confirmation before sending
+
+
+
+
+### Sending payload
+
+import meshtastic
+import meshtastic.serial_interface
+import time
+
+interface = meshtastic.serial_interface.SerialInterface("/dev/ttyACM0")
+
+payload = ews_msg.SerializeToString()
+
+interface.sendText(payload, portNum=384)
+
+print(f"Ews message send")
+
+## delay
+time.sleep(1)
+
+interface.close()
+
 
 
 
