@@ -63,7 +63,7 @@ import meshtastic.serial_interface
 import portnums_pb2
 import time
 
-interface = meshtastic.serial_interface.SerialInterface("/dev/ttyACM0")
+interface = meshtastic.serial_interface.SerialInterface("/dev/ttyUSB0")
 
 payload = ews_msg.SerializeToString()
 
