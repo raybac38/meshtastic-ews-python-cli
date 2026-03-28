@@ -5,9 +5,29 @@
 ## Installation
 
 need to have python3
-execute line by line install.sh
 
-## Set environnement
 
+### Download submodule with protobuf
+
+```bash
+$ git submodule init
+$ git submodule update
+```
+
+### Install all python dependency
+
+```bash
+$ install.sh
+```
+
+### Load python virtual environnement
+
+```bash
 $ source ./set_env.sh
+```
+
+### Compiling protobuf for python
+```bash
+$ protoc --python_out=. ./protobufs_ews/meshtastic/ews.proto 
+```
 
