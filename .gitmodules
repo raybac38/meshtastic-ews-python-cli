@@ -1,0 +1,3 @@
+[submodule "protobufs_ews"]
+	path = protobufs_ews
+	url = git@github.com:raybac38/protobufs_ews.git
