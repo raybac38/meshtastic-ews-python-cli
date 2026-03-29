@@ -175,15 +175,23 @@ import time
 
 payload = ews_msg.SerializeToString()
 
-interface = meshtastic.serial_interface.SerialInterface("/dev/ttyACM0")
+interface = meshtastic.serial_interface.SerialInterface("/dev/ttyUSB0")
 
 
 
-interface.sendText(payload, portNum=384)
+interface.sendData(payload, portNum=384)
 
-print(f"Ews message send")
+print(f"Ews message send 1")
 
 ## delay
 time.sleep(1)
+
+interface.sendData(payload, portNum=384)
+
+print(f"Ews message send 2")
+
+## delay
+time.sleep(1)
+
 
 interface.close()
